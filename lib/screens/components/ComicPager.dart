@@ -203,7 +203,7 @@ class _ControllerComicPagerState extends State<ControllerComicPager> {
                             if (num == 0 || num > comicsPage.pages) {
                               return;
                             }
-                            if (num > 10 && !isPro) {
+                            if (num > 10 && false) {
                               defaultToast(context, "发电以后才能看10页以后的内容");
                               return;
                             }
@@ -239,7 +239,7 @@ class _ControllerComicPagerState extends State<ControllerComicPager> {
                   minWidth: 0,
                   onPressed: () {
                     if (comicsPage.page < comicsPage.pages) {
-                      if (_currentPage >= 10 && !isPro) {
+                      if (_currentPage >= 10 && false) {
                         defaultToast(context, "发电以后才能看10页以后的内容");
                         return;
                       }
@@ -261,7 +261,7 @@ class _ControllerComicPagerState extends State<ControllerComicPager> {
     if (comicsPage.page < comicsPage.pages) {
       return FitButton(
         onPressed: () {
-          if (_currentPage >= 10 && !isPro) {
+          if (_currentPage >= 10 && false) {
             defaultToast(context, "发电以后才能看10页以后的内容");
             return;
           }
@@ -342,7 +342,7 @@ class _StreamComicPagerState extends State<StreamComicPager> {
       _maxPage = page.pages;
       _list.addAll(page.docs);
       _over = page.page >= page.pages;
-      _noPro = _currentPage > 10 && !isPro;
+      _noPro = _currentPage > 10 && false;
       // });
       widget.comicListController?.loadViewed();
     } catch (e, s) {
@@ -457,7 +457,7 @@ class _StreamComicPagerState extends State<StreamComicPager> {
                                 if (num == 0 || num > _maxPage) {
                                   return;
                                 }
-                                if (_currentPage >= 10 && !isPro) {
+                                if (_currentPage >= 10 && false) {
                                   defaultToast(context, "发电以后才能看10页以后的内容");
                                   return;
                                 }
